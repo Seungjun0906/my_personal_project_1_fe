@@ -9,27 +9,23 @@
         "lint": "next lint",
         "prepare": "husky install"
     },
-    "lint-staged": {
-        "*.{js,ts,tsx}": [
-            "bash -c tsc-files --noEmit",
-            "eslint"
-        ],
-        "*.{js,css,md}": "prettier --write"
-    },
     "dependencies": {
         "@types/node": "18.15.11",
         "@types/react": "18.0.33",
         "@types/react-dom": "18.0.11",
-        "eslint-config-next": "13.3.0",
         "next": "13.3.0",
         "react": "18.2.0",
         "react-dom": "18.2.0",
         "typescript": "5.0.3"
     },
     "devDependencies": {
+        "@next/eslint-plugin-next": "^13.3.0",
+        "@typescript-eslint/eslint-plugin": "^5.57.1",
+        "@typescript-eslint/parser": "^5.37.0",
         "eslint": "^8.37.0",
         "eslint-config-airbnb": "^19.0.4",
         "eslint-config-airbnb-typescript": "^17.0.0",
+        "eslint-config-next": "^13.3.0",
         "eslint-config-prettier": "^8.8.0",
         "eslint-plugin-import": "^2.27.5",
         "eslint-plugin-jsx-a11y": "^6.7.1",
@@ -38,5 +34,11 @@
         "eslint-plugin-react-hooks": "^4.6.0",
         "husky": "^8.0.3",
         "lint-staged": "^13.2.1"
+    },
+    "lint-staged": {
+        "*.{js,jsx,ts,tsx}": [
+            "prettier --write",
+            "eslint --fix"
+        ]
     }
 }
