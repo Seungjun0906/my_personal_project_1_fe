@@ -1,11 +1,12 @@
 import { FunctionComponent, useMemo } from "react";
 import { Button } from "@mui/base";
+import Link from "next/link";
 
 const Header: FunctionComponent = () => {
     const MENU_OBJECT_LIST = useMemo(() => {
         return [
             {
-                title: "Menu",
+                title: "Home",
                 href: "/home",
             },
             {
@@ -16,9 +17,11 @@ const Header: FunctionComponent = () => {
     }, []);
 
     return (
-        <div className="w-full border-b-gray-500 border-b">
+        <div className="w-full flex items-center gap-2 h-10 border-b-gray-500 border-b">
             {MENU_OBJECT_LIST.map((menuObject) => (
-                <Button key={`${menuObject.title}`}>{menuObject.title}</Button>
+                <Link key={`${menuObject.title}`} href={menuObject.href}>
+                    <Button>{menuObject.title}</Button>
+                </Link>
             ))}
         </div>
     );
