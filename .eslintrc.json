@@ -1,7 +1,7 @@
 {
     "root": true,
     "parser": "@typescript-eslint/parser",
-    "plugins": ["@typescript-eslint", "prettier", "eslint-plugin-react"],
+    "plugins": ["@typescript-eslint", "prettier", "eslint-plugin-react", "@tanstack/eslint-plugin-query"],
     "parserOptions": {
         "project": "./tsconfig.json",
         "createDefaultProgram": true
@@ -21,6 +21,7 @@
         "prettier" // eslint-config-prettier prettier와 중복된 eslint 규칙 제거
     ],
     "rules": {
+        "arrow-body-style": "off",
         "no-console": "error",
         "@typescript-eslint/no-unused-vars": "error",
         "react/react-in-jsx-scope": "off", // react 17부턴 import 안해도돼서 기능 끔
@@ -30,6 +31,7 @@
         "react/prop-types": "off",
         "no-empty-pattern": 2,
         "no-case-declarations": 2,
-        "@typescript-eslint/no-empty-interface": 2
+        "@typescript-eslint/no-empty-interface": 2,
+        "react/function-component-definition": [2, { "namedComponents": ["arrow-function", "function-declaration"] }]
     }
 }
