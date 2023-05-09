@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.MuiFab-primary,
+.MuiButton-containedPrimary {
+    @apply bg-primary;
+}
+
+.MuiFab-error,
+.MuiButton-containedError {
+    @apply bg-error;
+}

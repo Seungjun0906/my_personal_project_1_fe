@@ -1,6 +1,9 @@
+"use client";
+
 import { FunctionComponent, useMemo } from "react";
-import { Button } from "@mui/base";
+
 import Link from "next/link";
+import { Button } from "@mui/material";
 
 const Header: FunctionComponent = () => {
     const MENU_OBJECT_LIST = useMemo(() => {
@@ -17,11 +20,11 @@ const Header: FunctionComponent = () => {
     }, []);
 
     return (
-        <div className="w-full flex items-center gap-2 h-10 border-b-gray-500 border-b">
+        <div className="w-full flex items-center gap-2 border-b-gray-500 border-b">
             {MENU_OBJECT_LIST.map((menuObject) => (
-                <Link key={`${menuObject.title}`} href={menuObject.href}>
-                    <Button>{menuObject.title}</Button>
-                </Link>
+                <Button key={`${menuObject.title}`}>
+                    <Link href={menuObject.href}>{menuObject.title}</Link>
+                </Button>
             ))}
         </div>
     );
