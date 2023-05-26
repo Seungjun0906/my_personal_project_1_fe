@@ -17,13 +17,24 @@
         "@mui/system": "^5.12.3",
         "@tanstack/react-query": "^4.29.5",
         "@tanstack/react-query-devtools": "^4.29.6",
+        "@types/lodash": "^4.14.194",
+        "@types/mime-types": "^2.1.1",
         "@types/node": "18.15.11",
         "@types/react": "18.0.33",
         "@types/react-dom": "18.0.11",
+        "@types/tar-stream": "^2.2.2",
+        "@types/unzipper": "^0.10.6",
+        "axios": "^1.4.0",
+        "jszip": "^3.10.1",
+        "lodash": "^4.17.21",
+        "mime-types": "^2.1.35",
         "next": "^13.4.1",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
-        "typescript": "5.0.3"
+        "socket.io-client": "^4.6.1",
+        "tar-stream": "^3.0.0",
+        "typescript": "5.0.3",
+        "unzipper": "^0.10.14"
     },
     "devDependencies": {
         "@next/eslint-plugin-next": "^13.3.0",
@@ -45,6 +56,9 @@
         "lint-staged": "^13.2.1",
         "postcss": "^8.4.21",
         "tailwindcss": "^3.3.1"
+    },
+    "browser": {
+        "fs": false
     },
     "lint-staged": {
         "*.{js,jsx,ts,tsx}": [

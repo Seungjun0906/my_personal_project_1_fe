@@ -14,8 +14,6 @@
     },
     "ignorePatterns": ["node_modules/"], // eslint 미적용될 폴더나 파일 명시
     "extends": [
-        "airbnb",
-        "airbnb-typescript",
         "airbnb/hooks",
         "next/core-web-vitals",
         "prettier" // eslint-config-prettier prettier와 중복된 eslint 규칙 제거
@@ -32,6 +30,9 @@
         "no-empty-pattern": 2,
         "no-case-declarations": 2,
         "@typescript-eslint/no-empty-interface": 2,
-        "react/function-component-definition": [2, { "namedComponents": ["arrow-function", "function-declaration"] }]
+        "react/function-component-definition": [2, { "namedComponents": ["arrow-function", "function-declaration"] }],
+        "react/require-default-props": "off",
+        "spaced-comment": "off",
+        "react/no-array-index-key": "off"
     }
 }

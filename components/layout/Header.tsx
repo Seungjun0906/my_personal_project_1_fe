@@ -13,6 +13,10 @@ const Header: FunctionComponent = () => {
                 href: "/home",
             },
             {
+                title: "lab",
+                href: "/lab",
+            },
+            {
                 title: "Login",
                 href: "/login",
             },
@@ -20,13 +24,13 @@ const Header: FunctionComponent = () => {
     }, []);
 
     return (
-        <div className="w-full flex items-center gap-2 border-b-gray-500 border-b">
+        <header className="w-full flex items-center gap-2 border-b-gray-500 border-b">
             {MENU_OBJECT_LIST.map((menuObject) => (
                 <Button key={`${menuObject.title}`}>
                     <Link href={menuObject.href}>{menuObject.title}</Link>
                 </Button>
             ))}
-        </div>
+        </header>
     );
 };
 
